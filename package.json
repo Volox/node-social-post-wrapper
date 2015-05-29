@@ -1,0 +1,18 @@
+{
+  "name": "@volox/social-post-wrapper",
+  "version": "0.1.0",
+  "description": "Wraps raw social data to general Post",
+  "main": "./index.js",
+  "scripts": {},
+  "repository": {
+  },
+  "author": "Volox <voloxxx@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "3.x"
+  },
+  "devDependencies": {
+    "chai": "2.x",
+    "mocha": "2.x"
+  }
+}
