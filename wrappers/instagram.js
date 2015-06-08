@@ -7,7 +7,6 @@ var moment = require( 'moment' );
 // Load my modules
 
 // Constant declaration
-var DATE_FORMAT = 'dd MMM DD HH:mm:ss ZZ YYYY';
 
 // Module variables declaration
 
@@ -15,21 +14,26 @@ var DATE_FORMAT = 'dd MMM DD HH:mm:ss ZZ YYYY';
 function wrap( media ) {
   var date = moment.unix( media.created_time ); // jshint ignore: line
 
-  var location = media.location;
-
   var post = {
     id: media.id,
     text: media.caption? media.caption.text: '',
     date: date.toDate(),
-    location: location? {
-      type: 'Point',
-      coordinates: [ location.longitude, location.latitude ],
-    } : null,
     author: media.user.username,
     authorId: media.user.id,
     tags: media.tags,
     raw: media,
   };
+
+  var location = media.location;
+  if( location && location.longitude ) {
+    post.location = {
+      type: 'Point',
+      coordinates: [ location.longitude, location.latitude ],
+    };
+  } else {
+    post.location = null;
+  }
+
 
   return post;
 }

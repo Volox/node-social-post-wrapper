@@ -5,11 +5,14 @@
   "main": "./index.js",
   "scripts": {},
   "repository": {
+    "type": "git",
+    "url": "Volox/node-social-post-wrapper"
   },
   "author": "Volox <voloxxx@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "3.x"
+    "lodash": "3.x",
+    "moment": "2.x"
   },
   "devDependencies": {
     "chai": "2.x",
