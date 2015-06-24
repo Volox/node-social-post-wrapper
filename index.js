@@ -12,7 +12,7 @@
 // Module functions declaration
 function wrap( data, social, options ) {
   options = options || {};
-  var useFiled = options.useFiled===false? false : true;
+  var useField = options.useField===false? false : true;
   var field = options.field || 'provider';
 
   // Load wrapper
@@ -23,7 +23,7 @@ function wrap( data, social, options ) {
 
 
   // Add the provider if needed
-  if( useFiled ) {
+  if( useField ) {
     post[ field ] = social;
   }
 
