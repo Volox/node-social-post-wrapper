@@ -13,6 +13,9 @@ var DATE_FORMAT = 'dd MMM DD HH:mm:ss ZZ YYYY';
 
 // Module functions declaration
 function wrap( tweet ) {
+  if( !tweet ) {
+    return;
+  }
   var tags = [];
   if( tweet.entities ) {
     tags = tweet.entities.hashtags.map( function( h ) {

@@ -20,6 +20,9 @@ function wrap( data, social, options ) {
 
   // Warp data
   var post = w( data );
+  if( !post ) {
+    return null;
+  }
 
 
   // Add the provider if needed
