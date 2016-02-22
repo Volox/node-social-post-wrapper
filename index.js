@@ -16,14 +16,16 @@ function wrap( data, social, options ) {
   var field = options.field || 'provider';
 
   // Load wrapper
-  var w = require( './wrappers/'+social );
+  var wrapper = require( './wrappers/'+social );
 
-  // Warp data
-  var post = w( data );
+  // Wrap data
+  var post = wrapper( data );
   if( !post ) {
     return null;
   }
 
+  // Add common fields
+  post.timestamp = post.date.getTime();
 
   // Add the provider if needed
   if( useField ) {
