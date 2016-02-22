@@ -21,6 +21,7 @@ function wrap( media ) {
     author: media.user.username,
     authorId: media.user.id,
     tags: media.tags,
+    link: media.link,
     raw: media,
   };
 
