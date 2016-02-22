@@ -33,6 +33,7 @@ console.log( igPost1 );
 The wrapper accepts the following options:
 
 | Name         | Description                                                                   | Type    | Required | Default |
+|--------------|-------------------------------------------------------------------------------|---------|----------|---------|
 | **useField** | Add a field that specifies the source of the post (EG twitter, instagram ...) | Boolean | `false`  | `true`  |
 | **field**    | The field where the provider will be saved                                    | String  | `false`    | `'provider'`        |
 
@@ -40,6 +41,7 @@ The wrapper accepts the following options:
 ## Post format:
 
 | Field    | Description                                         | Type         | Available      |
+|----------|-----------------------------------------------------|--------------|----------------|
 | id       | The id from the provider                            | String       | yes            |
 | text     | The text of the post                                | String       | yes            |
 | date     | The creation date of the post                       | Date         | yes            |
