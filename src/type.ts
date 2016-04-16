@@ -10,24 +10,21 @@
 // Module variables declaration
 
 // Module interfaces declaration
-interface Wrapper {
-  ( data: any ): Post
-}
-interface Location {
-  type: string,
-  coordinates: number[],
-}
-interface Post {
+export interface Post {
   id: string,
   text: string,
-  timestamp: number,
   date: Date,
+  timestamp: number,
   author: string,
   authorId: string,
   tags: string[],
   raw: any,
 
-  location?: Location,
+  // Location can be null
+  location: GeoJSON.Point,
+}
+export interface Wrapper {
+  ( data: any ): Post
 }
 
 
@@ -38,6 +35,5 @@ interface Post {
 // Module initialization (at first load)
 
 // Module exports
-export { Wrapper, Post, Location };
 
 //  50 6F 77 65 72 65 64  62 79  56 6F 6C 6F 78

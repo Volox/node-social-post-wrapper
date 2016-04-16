@@ -2,8 +2,9 @@
   "name": "@volox/social-post-wrapper",
   "version": "1.1.0",
   "description": "Wraps raw social data to generic Post",
-  "main": "./index.js",
+  "main": "./lib/index.js",
   "scripts": {
+    "prepublish": "tsc",
     "test": "mocha"
   },
   "repository": {
@@ -15,18 +16,12 @@
   "dependencies": {
     "moment": "2.x"
   },
+  "typings": {
+    "definition": "lib/index.d.ts"
+  },
   "devDependencies": {
-    "babel-plugin-transform-es2015-destructuring": "6.x",
-    "babel-plugin-transform-es2015-parameters": "6.x",
-    "babel-plugin-transform-es2015-spread": "6.x",
     "chai": "3.x",
-    "eslint": "2.x",
-    "eslint-config-volox": "*",
-    "gulp": "3.x",
-    "gulp-babel": "6.x",
-    "gulp-typescript": "2.x",
     "mocha": "2.x",
-    "tslint": "3.x",
-    "typescript": "1.x"
+    "typescript": "1.*"
   }
 }

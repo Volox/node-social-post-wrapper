@@ -3,6 +3,7 @@
   "version": false,
   "dependencies": {},
   "ambientDependencies": {
+    "geojson": "registry:dt/geojson#0.0.0+20160319143602",
     "node": "registry:dt/node#4.0.0+20160330064709"
   }
 }

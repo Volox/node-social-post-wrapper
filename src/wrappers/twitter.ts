@@ -5,10 +5,11 @@
 import moment = require( 'moment' );
 
 // Load my modules
-import { Wrapper, Post } from './type';
+import { Wrapper, Post } from '../type';
 
 // Constant declaration
 const DATE_FORMAT = 'dd MMM DD HH:mm:ss ZZ YYYY';
+
 // Module variables declaration
 
 // Module interfaces declaration
@@ -17,7 +18,7 @@ interface TwitterPost extends Post {
 }
 
 // Module functions declaration
-function wrapTwitter( tweet: any ): Post {
+export default function wrapTwitter( tweet: any ): Post {
   let tags: string[] = [];
   if ( tweet.entities && tweet.entities.hashtags ) {
     tags = tweet.entities.hashtags.map( h => h.text );
@@ -49,6 +50,5 @@ function wrapTwitter( tweet: any ): Post {
 // Module initialization (at first load)
 
 // Module exports
-export = wrapTwitter;
 
 //  50 6F 77 65 72 65 64  62 79  56 6F 6C 6F 78

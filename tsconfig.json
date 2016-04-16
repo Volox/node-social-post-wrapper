@@ -1,39 +1,22 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "module": "commonjs",
     "noImplicitAny": false,
-    "outDir": "./lib/",
-    "target": "es6",
-    "sourceMap": false
+    "target": "es5",
+    "outDir": "lib",
+    "sourceMap": true
   },
   "files": [
     "typings/main.d.ts",
-    "src/index.ts",
     "src/wrappers/instagram.ts",
     "src/wrappers/twitter.ts",
-    "src/wrappers/type.ts"
+    "src/type.ts",
+    "src/index.ts"
   ],
   "filesGlob": [
     "typings/main.d.ts",
     "src/**/*.ts"
   ],
-  "formatCodeOptions": {
-    "indentSize": 2,
-    "tabSize": 1,
-    "newLineCharacter": "\n",
-    "convertTabsToSpaces": true,
-    "insertSpaceAfterCommaDelimiter": true,
-    "insertSpaceAfterSemicolonInForStatements": true,
-    "insertSpaceBeforeAndAfterBinaryOperators": true,
-    "insertSpaceAfterKeywordsInControlFlowStatements": true,
-    "insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
-    "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
-    "placeOpenBraceOnNewLineForFunctions": false,
-    "placeOpenBraceOnNewLineForControlBlocks": false
-  },
-  "compileOnSave": true,
-  "atom": {
-    "rewriteTsconfig": true,
-    "formatOnSave": true
-  }
+  "compileOnSave": true
 }

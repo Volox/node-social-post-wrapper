@@ -5,23 +5,25 @@ import path = require( 'path' );
 // Load modules
 
 // Load my modules
-import { Wrapper, Post } from './wrappers/type';
+import { Wrapper, Post } from './type';
 
 // Constant declaration
 
 // Module variables declaration
-type Socials = 'twitter' | 'instagram';
 
 // Module interfaces declaration
-interface Options {
+export interface Options {
   useField?: boolean,
   field?: string,
 }
 
 // Module functions declaration
-function wrap( data: any, social: Socials, options: Options = { useField: true, field: 'provider' }): Post {
+export default function wrap( data: any, social: string, options: Options ): Post {
+  options.useField = options.useField===false? false : true;
+  options.field = options.field || 'provider';
+
   const wrapperPath: string = path.resolve( __dirname, 'wrappers', social );
-  const wrapper: Wrapper = require( wrapperPath );
+  const wrapper = require( wrapperPath ) as Wrapper;
 
   // Generate post
   const post: Post = wrapper( data );
@@ -39,6 +41,5 @@ function wrap( data: any, social: Socials, options: Options = { useField: true, 
 // Module initialization (at first load)
 
 // Module exports
-export = wrap;
 
 //  50 6F 77 65 72 65 64  62 79  56 6F 6C 6F 78
