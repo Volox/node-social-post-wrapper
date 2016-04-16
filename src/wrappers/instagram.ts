@@ -16,7 +16,7 @@ interface InstagramPost extends Post {
 }
 
 // Module functions declaration
-export default function wrapInstagram( media: any ): Post {
+function wrapInstagram( media: any ): Post {
   const timestamp: number = Number( media.created_time );
   const date: Date = new Date( timestamp );
   const text: string = media.caption ? media.caption.text : '';
@@ -58,5 +58,6 @@ export default function wrapInstagram( media: any ): Post {
 // Module initialization (at first load)
 
 // Module exports
+export = wrapInstagram;
 
 //  50 6F 77 65 72 65 64  62 79  56 6F 6C 6F 78

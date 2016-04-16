@@ -5,20 +5,17 @@ import path = require( 'path' );
 // Load modules
 
 // Load my modules
-import { Wrapper, Post } from './type';
+import { Wrapper, Post, Options } from './type';
 
 // Constant declaration
 
 // Module variables declaration
 
 // Module interfaces declaration
-export interface Options {
-  useField?: boolean,
-  field?: string,
-}
 
 // Module functions declaration
-export default function wrap( data: any, social: string, options: Options ): Post {
+function wrap( data: any, social: string, options?: Options ): Post {
+  options = options || {};
   options.useField = options.useField===false? false : true;
   options.field = options.field || 'provider';
 
@@ -41,5 +38,6 @@ export default function wrap( data: any, social: string, options: Options ): Pos
 // Module initialization (at first load)
 
 // Module exports
+export = wrap;
 
 //  50 6F 77 65 72 65 64  62 79  56 6F 6C 6F 78

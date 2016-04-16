@@ -10,6 +10,10 @@
 // Module variables declaration
 
 // Module interfaces declaration
+export interface Options {
+  useField?: boolean,
+  field?: string,
+}
 export interface Post {
   id: string,
   text: string,

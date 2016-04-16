@@ -18,7 +18,7 @@ interface TwitterPost extends Post {
 }
 
 // Module functions declaration
-export default function wrapTwitter( tweet: any ): Post {
+function wrapTwitter( tweet: any ): Post {
   let tags: string[] = [];
   if ( tweet.entities && tweet.entities.hashtags ) {
     tags = tweet.entities.hashtags.map( h => h.text );
@@ -50,5 +50,6 @@ export default function wrapTwitter( tweet: any ): Post {
 // Module initialization (at first load)
 
 // Module exports
+export = wrapTwitter;
 
 //  50 6F 77 65 72 65 64  62 79  56 6F 6C 6F 78

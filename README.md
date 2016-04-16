@@ -1,6 +1,6 @@
 
-# Social warp
-Warps a post from a social network into a generic Post
+# Social wrap
+Wraps a post from a social network into a generic Post
 
 # Usage
 
