@@ -12,10 +12,10 @@ import { Wrapper, Post, Options } from './type';
 // Module variables declaration
 
 // Module interfaces declaration
+export { Wrapper, Post, Options };
 
 // Module functions declaration
-function wrap( data: any, social: string, options?: Options ): Post {
-  options = options || {};
+export default function wrap( data: any, social: string, options: Options = {} ): Post {
   options.useField = options.useField===false? false : true;
   options.field = options.field || 'provider';
 
@@ -38,6 +38,5 @@ function wrap( data: any, social: string, options?: Options ): Post {
 // Module initialization (at first load)
 
 // Module exports
-export = wrap;
 
 //  50 6F 77 65 72 65 64  62 79  56 6F 6C 6F 78

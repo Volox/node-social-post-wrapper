@@ -16,12 +16,10 @@
   "dependencies": {
     "moment": "2.x"
   },
-  "typings": {
-    "definition": "lib/index.d.ts"
-  },
+  "typings": "./lib/index.d.ts",
   "devDependencies": {
     "chai": "3.x",
     "mocha": "2.x",
-    "typescript": "1.*"
+    "typescript": "1.x"
   }
 }

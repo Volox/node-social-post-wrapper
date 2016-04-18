@@ -3,7 +3,7 @@
 const chai = require( 'chai' );
 const expect = chai.expect;
 
-const wrap = require( '../' );
+const wrap = require( '../' ).default;
 
 describe( 'Wrap', function() {
 

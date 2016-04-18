@@ -31,10 +31,11 @@ export interface Wrapper {
   ( data: any ): Post
 }
 
-
 // Module functions declaration
 
 // Module class declaration
+
+// Module namespaces
 
 // Module initialization (at first load)
 
