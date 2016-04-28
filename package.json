@@ -4,7 +4,9 @@
   "description": "Wraps raw social data to generic Post",
   "main": "./lib/index.js",
   "scripts": {
-    "prepublish": "tsc",
+    "build": "tslint src/**/*.ts && tsc",
+    "postinstall": "npm run build",
+    "prepublish": "npm run build",
     "test": "mocha"
   },
   "repository": {
@@ -20,6 +22,7 @@
   "devDependencies": {
     "chai": "3.x",
     "mocha": "2.x",
-    "typescript": "1.x"
+    "tslint": "^3.8.1",
+    "typescript": "^1.8.10"
   }
 }

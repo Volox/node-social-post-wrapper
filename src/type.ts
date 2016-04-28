@@ -11,24 +11,24 @@
 
 // Module interfaces declaration
 export interface Options {
-  useField?: boolean,
-  field?: string,
+  useField?: boolean;
+  field?: string;
 }
 export interface Post {
-  id: string,
-  text: string,
-  date: Date,
-  timestamp: number,
-  author: string,
-  authorId: string,
-  tags: string[],
-  raw: any,
+  id: string;
+  text: string;
+  date: Date;
+  timestamp: number;
+  author: string;
+  authorId: string;
+  tags: string[];
+  raw: any;
 
   // Location can be null
-  location: GeoJSON.Point,
+  location: GeoJSON.Point;
 }
 export interface Wrapper {
-  ( data: any ): Post
+  ( data: any ): Post;
 }
 
 // Module functions declaration

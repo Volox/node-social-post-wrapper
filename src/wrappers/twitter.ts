@@ -14,7 +14,7 @@ const DATE_FORMAT = 'dd MMM DD HH:mm:ss ZZ YYYY';
 
 // Module interfaces declaration
 interface TwitterPost extends Post {
-  lang: string,
+  lang: string;
 }
 
 // Module functions declaration

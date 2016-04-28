@@ -5,7 +5,6 @@
     "noImplicitAny": false,
     "target": "es5",
     "outDir": "lib",
-    "noLib": false,
     "sourceMap": true
   },
   "files": [

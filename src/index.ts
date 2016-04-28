@@ -16,7 +16,7 @@ export { Wrapper, Post, Options };
 
 // Module functions declaration
 export default function wrap( data: any, social: string, options: Options = {} ): Post {
-  options.useField = options.useField===false? false : true;
+  options.useField = options.useField === false ? false : true;
   options.field = options.field || 'provider';
 
   const wrapperPath: string = path.resolve( __dirname, 'wrappers', social );

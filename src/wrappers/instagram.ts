@@ -12,7 +12,7 @@ import { Wrapper, Post } from '../type';
 
 // Module interfaces declaration
 interface InstagramPost extends Post {
-  link: string,
+  link: string;
 }
 
 // Module functions declaration
