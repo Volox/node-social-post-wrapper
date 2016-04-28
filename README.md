@@ -5,7 +5,7 @@ Wraps a post from a social network into a generic Post
 # Usage
 
 ```js
-var wrap = require( '@volox/social-post-wrapper' );
+var wrap = require( '@volox/social-post-wrapper' ).default;
 var tweet = {...}; // From Twitter
 var instagramMedia = {...}; // From Instagram
 
