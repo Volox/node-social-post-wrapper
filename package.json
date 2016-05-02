@@ -1,6 +1,6 @@
 {
   "name": "@volox/social-post-wrapper",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Wraps raw social data to generic Post",
   "main": "./lib/index.js",
   "scripts": {
