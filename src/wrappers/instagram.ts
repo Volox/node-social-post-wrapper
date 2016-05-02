@@ -25,7 +25,7 @@ function wrapInstagram( media: any ): Post {
   let location: GeoJSON.Point;
   if ( media.location && media.location.longitude ) {
     location = {
-      type: 'Post',
+      type: 'Point',
       coordinates: [
         Number( media.location.longitude ),
         Number( media.location.latitude ),
