@@ -18,7 +18,7 @@ interface InstagramPost extends Post {
 // Module functions declaration
 function wrapInstagram( media: any ): Post {
   const timestamp: number = Number( media.created_time );
-  const date: Date = new Date( timestamp );
+  const date: Date = new Date( timestamp * 1000 );
   const text: string = media.caption ? media.caption.text : '';
 
   // Check for location
