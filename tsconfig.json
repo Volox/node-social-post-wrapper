@@ -9,6 +9,7 @@
   },
   "files": [
     "typings/main.d.ts",
+    "src/wrappers/facebook.ts",
     "src/wrappers/instagram.ts",
     "src/wrappers/twitter.ts",
     "src/type.ts",
