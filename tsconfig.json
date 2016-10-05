@@ -2,22 +2,14 @@
   "compilerOptions": {
     "declaration": true,
     "module": "commonjs",
-    "noImplicitAny": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "target": "es5",
     "outDir": "lib",
     "sourceMap": true
   },
-  "files": [
-    "typings/main.d.ts",
-    "src/wrappers/facebook.ts",
-    "src/wrappers/instagram.ts",
-    "src/wrappers/twitter.ts",
-    "src/type.ts",
-    "src/index.ts"
-  ],
-  "filesGlob": [
+  "include": [
     "typings/main.d.ts",
     "src/**/*.ts"
-  ],
-  "compileOnSave": true
+  ]
 }

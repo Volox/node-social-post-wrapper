@@ -22,7 +22,7 @@ function wrapInstagram( media: any ): Post {
   const text: string = media.caption ? media.caption.text : '';
 
   // Check for location
-  let location: GeoJSON.Point;
+  let location: GeoJSON.Point | undefined = undefined;
   if ( media.location && media.location.longitude ) {
     location = {
       type: 'Point',

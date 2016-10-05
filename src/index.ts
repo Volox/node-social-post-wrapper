@@ -1,6 +1,5 @@
-'use strict';
 // Load system modules
-import path = require( 'path' );
+import {resolve} from 'path';
 
 // Load modules
 
@@ -19,7 +18,7 @@ export default function wrap( data: any, social: string, options: Options = {} )
   options.useField = options.useField === false ? false : true;
   options.field = options.field || 'provider';
 
-  const wrapperPath: string = path.resolve( __dirname, 'wrappers', social );
+  const wrapperPath: string = resolve( __dirname, 'wrappers', social );
   const wrapper = require( wrapperPath ) as Wrapper;
 
   // Generate post

@@ -2,7 +2,7 @@
 // Load system modules
 
 // Load modules
-import moment = require( 'moment' );
+import * as moment from 'moment';
 
 // Load my modules
 import { Wrapper, Post } from '../type';
@@ -21,7 +21,7 @@ interface TwitterPost extends Post {
 function wrapTwitter( tweet: any ): Post {
   let tags: string[] = [];
   if ( tweet.entities && tweet.entities.hashtags ) {
-    tags = tweet.entities.hashtags.map( h => h.text );
+    tags = tweet.entities.hashtags.map( (h:any) => h.text );
   }
 
   const date: Date = moment( tweet.created_at, DATE_FORMAT, 'en' ).toDate();

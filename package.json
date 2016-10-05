@@ -3,8 +3,9 @@
   "version": "2.1.0",
   "description": "Wraps raw social data to generic Post",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "tslint src/**/*.ts && tsc",
+    "build": "tsc",
     "prepublish": "npm run build",
     "test": "mocha"
   },
@@ -15,13 +16,12 @@
   "author": "Volox <voloxxx@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "moment": "2.x"
+    "moment": "^2.15.1"
   },
-  "typings": "./lib/index.d.ts",
   "devDependencies": {
+    "@types/geojson": "0.0.31",
+    "@types/node": "^6.0.42",
     "chai": "3.x",
-    "mocha": "2.x",
-    "tslint": "^3.8.1",
-    "typescript": "^1.8.10"
+    "mocha": "2.x"
   }
 }

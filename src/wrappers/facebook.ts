@@ -1,4 +1,3 @@
-'use strict';
 // Load system modules
 
 // Load modules
@@ -28,9 +27,6 @@ function wrapFacebook( fbPost: any ): Post {
     author: fbPost.from.name,
     authorId: fbPost.from.id,
     tags: tags,
-
-    // Optional
-    location: null,
 
     raw: fbPost,
   };
